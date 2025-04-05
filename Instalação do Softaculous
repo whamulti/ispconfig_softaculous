@@ -1,0 +1,44 @@
+
+INSTALAÇÃO DO ISPCONFIG
+
+# nano /etc/hosts
+
+--
+
+141.98.153.82	ispconfig.whamulti.app.br ispconfig
+
+---
+
+# nano /etc/hostname
+
+--
+
+ispconfig
+
+--
+
+# apt update -y && apt upgrade -y && apt autoremove -y && reboot
+
+----
+
+Installation with Apache
+
+# wget -O - https://get.ispconfig.org | sh -s -- --use-ftp-ports=40110-40210 --unattended-upgrades
+
+# systemctl status apache2
+
+---
+
+http://141.98.153.82:8080
+
+
+
+---
+
+Sites:
+
+1 - Adicione um novo site
+
+2 - Adicione o dominio
+
+3 - Habilite o SSL e Let's Encrypt SSL
